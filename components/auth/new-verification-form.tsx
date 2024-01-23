@@ -21,7 +21,6 @@ const NewVerificationForm = () => {
       setError("Missing token!");
       return;
     }
-    console.log(token);
     newVerification(token)
       .then((data) => {
         setSuccess(data.success);

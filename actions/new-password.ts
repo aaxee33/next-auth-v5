@@ -53,6 +53,4 @@ export const newPassword = async (
   });
 
   return { success: "Password updated!" };
-
-  //   console.log("existingToken: ", existingToken);
 };
