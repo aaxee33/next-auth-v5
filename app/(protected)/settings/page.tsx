@@ -1,20 +1,15 @@
-import React from "react";
-import { auth, signOut } from "@/auth";
+"use client";
+import { logout } from "@/actions/logout";
 import { Button } from "@/components/ui/button";
+import { useCurrentUser } from "@/hooks/use-current-user";
 
-const SettingsPage = async () => {
-  const session = await auth();
+const SettingsPage = () => {
+  const user = useCurrentUser();
   return (
-    <div>
-      {JSON.stringify(session)}
-      <form
-        action={async () => {
-          "use server";
-          await signOut();
-        }}
-      >
-        <Button type="submit">Sign out</Button>
-      </form>
+    <div className="bg-white p-10 rounded-xl">
+      <Button type="submit" onClick={() => logout()}>
+        Sign out
+      </Button>
     </div>
   );
 };
