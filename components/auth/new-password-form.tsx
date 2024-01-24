@@ -19,7 +19,6 @@ import FormError from "../form-error";
 import FormSuccess from "../form-success";
 import { useState, useTransition } from "react";
 import { useSearchParams } from "next/navigation";
-import { Label } from "../ui/label";
 import { newPassword } from "@/actions/new-password";
 
 const NewPasswordForm = () => {
